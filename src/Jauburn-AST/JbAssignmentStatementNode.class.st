@@ -1,3 +1,6 @@
+"
+JbAssignmentStatementNode class.
+"
 Class {
 	#name : #JbAssignmentStatementNode,
 	#superclass : #Object,

@@ -1,3 +1,6 @@
+"
+JbArity1OperatorNode class.
+"
 Class {
 	#name : #JbArity1OperatorNode,
 	#superclass : #Object,

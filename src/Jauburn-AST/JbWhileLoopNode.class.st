@@ -1,32 +1,32 @@
 "
-JbIfNode class.
+JbWhileLoopNode class.
 "
 Class {
-	#name : #JbIfNode,
+	#name : #JbWhileLoopNode,
 	#superclass : #Object,
 	#instVars : [
 		'condition',
-		'trueStatements'
+		'whileStatements'
 	],
 	#category : #'Jauburn-AST-Core'
 }
 
 { #category : #accessing }
-JbIfNode >> condition [
+JbWhileLoopNode >> condition [
 	^ condition
 ]
 
 { #category : #accessing }
-JbIfNode >> condition: anObject [
+JbWhileLoopNode >> condition: anObject [
 	condition := anObject
 ]
 
 { #category : #accessing }
-JbIfNode >> trueStatements [
-	^ trueStatements
+JbWhileLoopNode >> whileStatements [
+	^ whileStatements
 ]
 
 { #category : #accessing }
-JbIfNode >> trueStatements: anObject [
-	trueStatements := anObject
+JbWhileLoopNode >> whileStatements: anObject [
+	whileStatements := anObject
 ]

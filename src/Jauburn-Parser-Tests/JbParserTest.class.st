@@ -1,3 +1,6 @@
+"
+Unit tests for the JbParser class.
+"
 Class {
 	#name : #JbParserTest,
 	#superclass : #PPCompositeParserTest,
@@ -285,4 +288,38 @@ JbParserTest >> testVariableDeclarationStatement [
 	self assert: stmt identifier equals: 'x'.
 	stmt := self parse: 'var monkey = 37*x;' rule: #variableDeclarationStatement.
 	self assert: stmt identifier equals: 'monkey'
+]
+
+{ #category : #'tests-statements' }
+JbParserTest >> testWhileLoop [
+
+	| stmt |
+	stmt := self parse: 'while (x == 1) {}' rule: #whileLoop.
+	self assert: stmt condition operator equals: '=='.
+	self assert: stmt whileStatements isEmpty
+]
+
+{ #category : #'tests-statements' }
+JbParserTest >> testWhileLoopSimple [
+
+	| stmt |
+	stmt := self parse: 'while (x <= 10) { sum = sum + x; }' rule: #whileLoop.
+	self assert: stmt class equals: JbWhileLoopNode.
+]
+
+{ #category : #'tests-statements' }
+JbParserTest >> testWhileStatement [
+
+	| stmt |
+	stmt := self parse: 'while (x == 1) {}' rule: #whileStatement.
+	self assert: stmt condition operator equals: '=='.
+	self assert: stmt whileStatements isEmpty
+]
+
+{ #category : #'tests-statements' }
+JbParserTest >> testWhileStatementSimple [
+
+	| stmt |
+	stmt := self parse: 'while (x <= 10) { sum = sum + x; }' rule: #whileStatement.
+	self assert: stmt class equals: JbWhileLoopNode.
 ]

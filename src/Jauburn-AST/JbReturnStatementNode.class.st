@@ -1,3 +1,6 @@
+"
+JbReturnStatementNode class.
+"
 Class {
 	#name : #JbReturnStatementNode,
 	#superclass : #Object,

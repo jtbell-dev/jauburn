@@ -1,3 +1,6 @@
+"
+JbFunctionCallNode class.
+"
 Class {
 	#name : #JbFunctionCallNode,
 	#superclass : #Object,

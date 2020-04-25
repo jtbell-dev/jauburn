@@ -1,3 +1,6 @@
+"
+Unit tests for the JbNumberParser class.
+"
 Class {
 	#name : #JbNumberParserTest,
 	#superclass : #PPCompositeParserTest,

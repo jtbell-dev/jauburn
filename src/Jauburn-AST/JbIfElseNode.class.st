@@ -1,3 +1,6 @@
+"
+JbIfElseNode class.
+"
 Class {
 	#name : #JbIfElseNode,
 	#superclass : #JbIfNode,
